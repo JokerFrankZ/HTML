@@ -1,15 +1,63 @@
-
-<!DOCTYPE html>
+<!doctype html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8 ;charset=GBK" />
-    <title>欢迎来到我的首页</title>
-    <style>
-        h1{
-            color="#ff0000"
-        }
-    </style>
+<meta charset="utf-8">
+<title>欢迎来到我的首页</title>
 </head>
+<style>
+	*{margin:0;padding:0;}
+	a{
+		text-decoration:none;
+		}
+	h1{
+		color:#000000;
+		margin:0 auto;
+		text-align:center;
+		margin:300px 0px 0px;
+		font-size:100px;
+		font-family:"微软雅黑";
+		}
+</style>
 <body>
-    <h1>我是JokerFrankZ</h1>
+	<h1 id="box">
+    	<a href="https://github.com/JokerFrankZ/">我是JokerFrankZ</a>
+    </h1>
 </body>
+<script>
+	(function changeColor() {
+        var arr = ['#00CC99', '#00FFFF', '#CCCCFF']
+        var t = 100
+        var n = false
+        var body = document.querySelector('body')
+        body.style.transition = 'background-color 500ms'
+
+        function change() {
+            n = !n
+            var v = arr.shift()
+            body.style.backgroundColor = v
+            arr.push(v)
+            if(n) {
+                setTimeout(change, t)
+            } else {
+                setTimeout(change, 3*t)
+            }
+        }
+
+        change()
+    })()
+	
+	function changeColor(){   
+    var color="#CCCCFF|#00FFFF|#00CC99";//定义一条变换颜色的字符串  
+    color=color.split("|"); //然后通过split方法进行分割  
+    var xuan = document.getElementsByTagName("a");//获得元素  
+  
+    for(var i=0;i<xuan.length;i++){  
+    xuan[i].style.color=color[parseInt(Math.random() * color.length)];//设置样式   
+  
+    }  
+  
+    }   
+    setInterval("changeColor()",500);//死循环，每0.5秒变换一种颜色  
+</script>
+
 </html>
