@@ -1,0 +1,262 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  outline: none;
+}
+ul{
+  list-style: none;
+}
+.all{
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg.png);
+}
+.all .top{
+  height: 205px;
+  margin: 0 auto;
+  background-repeat:repeat-x;
+  background-image: url(../images/logo1.jpg);
+  background-position:0px center;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.logo{
+  height: 139px;
+  border-top:1px solid;
+}
+.logo span{
+  display: block;
+  margin: 30px auto 0;
+  text-align: center;
+}
+.logo span a{
+  font: 60px "迷你简卡通";
+  color: #fff;
+  transition: color 0.8s cubic-bezier(0.25,0.5,0.75,1);
+}
+.logo span a:hover{
+  color: rgba(255, 90, 0, 0.7);
+}
+.all .top .nav{
+  background-color: rgba(235, 108, 52, 0.3);
+  border-bottom: 5px solid rgb(235, 108, 52);
+}
+.all .top .nav ul{
+  height: 60px;
+  margin-left: 300px;
+}
+.all .top .nav ul li{
+  height: 60px;
+  width: 100px;
+  line-height: 60px;
+  float:left;
+}
+.all .top .nav ul .look{
+  width: 100px;
+  position: relative;
+  margin-left: 150px;
+}
+.all .top .nav ul .look a{
+  color:#FFF;
+  font-weight: bold;
+}
+.all .top .nav ul .look span{
+  width: 266px;
+  height: 267px;
+  position: absolute;
+  left: -79px;
+  background-color:rgb(235, 108, 52);
+  z-index:999999999999999999999999;
+  display: none;
+}
+.all .top .nav ul .look:hover span{
+  display: block;
+}
+.all .top .nav ul .look span img{
+  width: 258px;
+  height: 258px;
+  margin: 5px auto 0;
+  display: block;
+}
+.all .top .nav ul li a{
+  display: block;
+  color: #e1ecec;
+  text-align: center;
+  transition:all 0.3s cubic-bezier(0,0,1,1);
+}
+.all .top .nav ul li a:visited{
+  background-color: rgba(235, 108, 52, 1);
+}
+.all .top .nav ul li a:hover{
+  background-color: rgba(235, 108, 52,0.8);
+}
+@media all and (max-width: 1200px) {
+  .all .top .nav ul .look{
+      margin-left: 50px;
+    }
+    .all .top .nav ul{
+      margin-left: 150px;
+    }
+}
+@media all and (max-width: 950px) {
+  .all .top .nav ul .look{
+      margin-left: 0px;
+    }
+  .all .top .nav ul{
+      margin-left: 50px;
+    }
+}
+@media all and (max-width: 770px) {
+    .all .top .nav ul{
+        margin-left: 30px;
+      }
+    .all .top .nav ul li{
+      width: 80px;
+    }
+}
+@media all and (max-width: 630px) {
+    .all .top .nav ul{
+        margin-left: 0px;
+      }
+    .all .top .logo{
+      display: none;
+    }
+    .all .top{
+      height:60px;
+    }
+}
+@media all and (max-width: 600px) {
+  .all .top{
+    display: none;
+  }
+  .all:before{
+    content: "请不要再继续挤了！";
+    color: red;
+    font-size: 50px;
+  }
+}
+.all .mid{
+  width: 1200px;
+  height: 100%;
+  margin:0 auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+.all .mid .model1_introduce,.model2_novel,.model3_movie,.model4_technology{
+  width: 1160px;
+  height: 400px;
+  background-color: #FFF;
+  margin: 20px auto 0;
+  border: 20px solid #fff;
+}
+.all .mid .model1_introduce{
+  margin-top:0;
+}
+.model1_introduce a,.model2_novel a,.model3_movie a,.model4_technology a{
+  background-image: url(../images/t1.png);
+  width: 200px;
+  height: 60px;
+  line-height:60px;
+  display: block;
+  position: relative;
+}
+.model1_introduce a span,.model2_novel a span,.model3_movie a span,.model4_technology a span{
+  font: 20px "微软雅黑";
+  color: #fff;
+  position: absolute;
+  left: 50px;
+  top:15px;
+}
+.model1_introduce .contents,.model2_novel .contents,.model3_movie .contents,.model4_technology .contents{
+  background-color: #fff;
+  height: 340px;
+}
+.model1_introduce .contents img,.model2_novel .contents img,.model3_movie .contents img,.model4_technology .contents img{
+  margin-top:20px;
+  float: left;
+}
+.model1_introduce .contents p,.model2_novel .contents p,.model3_movie .contents p,.model4_technology .contents p{
+  color: #888;
+  font: 50px "微软雅黑";
+  text-align: center;
+  line-height:110px;
+}
+.to_top{
+  width:50px;
+  height: 50px;
+  background: rgba(235, 108, 52,0.7);
+  position: fixed;
+  top:650px;
+  left:1450px;
+  border-radius: 10px;
+}
+.to_top a{
+  width:50px;
+  height: 50px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.all .feet{
+  height: 300px;
+  background-repeat:repeat-x;
+  background-image: url(../images/logo1.jpg);
+  background-position:0px bottom;
+  margin-top: 10px;
+}
+.all .feet .contact{
+  height: 250px;
+  background-color: rgba(110, 98, 98, 0.53);
+}
+.all .feet .contact .con{
+  width: 500px;
+  height: 210px;
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+  float: left;
+  margin:20px auto;
+}
+.all .feet .contact .con .ico{
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.all .feet .contact .con img{
+  width: 200px;
+  height: 200px;
+  margin-left: 90px;
+}
+.all .feet .contact .cont{
+  border-left:none;
+}
+.all .feet .contact .con p{
+  margin: 40px 0 0 90px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.8s cubic-bezier(0.25,0.5,0.75,1);
+}
+.all .feet .contact .con p:hover{
+  color: rgba(245, 242, 80, 0.78);
+  cursor: pointer;
+}
+.all .feet .copyright{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: #222;
+  color: #ccc;
+}
+.all .feet .copyright a{
+  color: #ccc;
+  transition: color 0.8s cubic-bezier(0.25,0.5,0.75,1);
+}
+.all .feet .copyright a:hover{
+  color: rgba(67, 245, 236, 0.75);
+}

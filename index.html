@@ -1,63 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>欢迎来到我的首页</title>
-</head>
-<style>
-	*{margin:0;padding:0;}
-	a{
-		text-decoration:none;
-		}
-	h1{
-		color:#000000;
-		margin:0 auto;
-		text-align:center;
-		margin:300px 0px 0px;
-		font-size:100px;
-		font-family:"微软雅黑";
-		}
-</style>
-<body>
-	<h1 id="box">
-    	<a href="https://github.com/JokerFrankZ/">我是JokerFrankZ</a>
-    </h1>
-</body>
-<script>
-	(function changeColor() {
-        var arr = ['#00CC99', '#00FFFF', '#CCCCFF']
-        var t = 100
-        var n = false
-        var body = document.querySelector('body')
-        body.style.transition = 'background-color 500ms'
-
-        function change() {
-            n = !n
-            var v = arr.shift()
-            body.style.backgroundColor = v
-            arr.push(v)
-            if(n) {
-                setTimeout(change, t)
-            } else {
-                setTimeout(change, 3*t)
-            }
-        }
-
-        change()
-    })()
-	
-	function changeColor(){   
-    var color="#000000|#00FFFF|#00CC99";//定义一条变换颜色的字符串  
-    color=color.split("|"); //然后通过split方法进行分割  
-    var xuan = document.getElementsByTagName("a");//获得元素  
-  
-    for(var i=0;i<xuan.length;i++){  
-    xuan[i].style.color=color[parseInt(Math.random() * color.length)];//设置样式   
-  
-    }  
-  
-    }   
-    setInterval("changeColor()",500);//死循环，每0.5秒变换一种颜色  
-</script>
-
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>虐猫狂人薛定谔</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/qrcode.jpg" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/mouse.js"></script>
+  </head>
+  <body>
+    <div class="all">
+      <div class="top">
+        <div class="logo">
+          <span><a href="https://jokerfrankz.github.io/HTML/" name="index">薛定谔那半死不活的猫</a></span>
+        </div>
+        <div class="nav">
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#introduce">个人介绍</a></li>
+            <li><a href="#novel">小说推荐</a></li>
+            <li><a href="#movie">影视推荐</a></li>
+            <li><a href="#technology">技术交流</a></li>
+            <li><a href="#contact">联系方式</a></li>
+            <li class="look">
+              <a href="#">快看这里</a>
+              <span><img src="images/qrcode.jpg"/></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="model1_introduce">
+          <a name="introduce"><span>个人介绍</span></a>
+          <div class="contents">
+            <img width="400px" height="300px" src="images/01.jpg"/>
+            <p>
+              你们就当这是一条个人介绍吧<br />
+              你们就当这是一条个人介绍吧<br />
+              你们就当这是一条个人介绍吧<br />
+            </p>
+          </div>
+        </div>
+        <div class="model2_novel">
+          <a name="novel"><span>小说推荐</span></a>
+          <div class="contents">
+            <img width="400px" height="300px" src="images/02.jpg"/>
+            <p>
+              你们就当这是一条小说推荐吧<br />
+              你们就当这是一条小说推荐吧<br />
+              你们就当这是一条小说推荐吧<br />
+            </p>
+          </div>
+        </div>
+        <div class="model3_movie">
+          <a name="movie"><span>影视推荐</span></a>
+          <div class="contents">
+            <img width="400px" height="300px" src="images/03.jpg"/>
+            <p>
+              你们就当这是一条影视推荐吧<br />
+              你们就当这是一条影视推荐吧<br />
+              你们就当这是一条影视推荐吧<br />
+            </p>
+          </div>
+        </div>
+        <div class="model4_technology">
+          <a name="technology"><span>技术交流</span></a>
+          <div class="contents">
+            <img width="400px" height="300px" src="images/04.jpg"/>
+            <p>
+              你们就当这是一条技术交流吧<br />
+              你们就当这是一条技术交流吧<br />
+              你们就当这是一条技术交流吧<br />
+            </p>
+          </div>
+        </div>
+        <div class="to_top">
+          <a href="#index">Top</a>
+        </div>
+      </div>
+      <div class="feet">
+        <div class="contact">
+          <a name="contact"></a>
+          <div class="con cont">
+            <img class="ico" src="images/weixin.png"/>
+            <img src="images/qrcodew.jpg" width="200px" height="200px"/>
+          </div>
+          <div class="con">
+            <img class="ico" src="images/qq.ico"/>
+            <img src="images/qrcodeq.jpg" width="200px" height="200px"/>
+          </div>
+          <div class="con">
+            <img class="ico" src="images/email.png"/>
+            <p>Outlook:jokerfrankz@Outlook.com</p>
+            <p>QQ-mail:mrzhangwp@qq.com</p>
+          </div>
+        </div>
+        <div class="copyright">
+          Copyright © 2018-∞ <a href="index.html">JokerFrankZ</a> | JokerFrankZ@outlook.com | Code by 张炜鹏
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
