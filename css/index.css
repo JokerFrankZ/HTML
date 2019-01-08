@@ -17,6 +17,7 @@ ul{
   width: 100%;
   height: 100%;
   background: url(../images/bg.png);
+  background-attachment:fixed;
 }
 .all .top{
   height: 205px;
@@ -155,7 +156,7 @@ ul{
   height: 400px;
   background-color: #FFF;
   margin: 20px auto 0;
-  border: 20px solid #fff;
+  border: 20px solid #FFF;
 }
 .all .mid .model1_introduce{
   margin-top:0;
@@ -167,6 +168,7 @@ ul{
   line-height:60px;
   display: block;
   position: relative;
+  cursor: pointer;
 }
 .model1_introduce a span,.model2_novel a span,.model3_movie a span,.model4_technology a span{
   font: 20px "微软雅黑";
@@ -182,6 +184,16 @@ ul{
 .model1_introduce .contents img,.model2_novel .contents img,.model3_movie .contents img,.model4_technology .contents img{
   margin-top:20px;
   float: left;
+  width: 400px;
+  height: 300px;
+  transition: all 0.8s cubic-bezier(0.25,0.5,0.75,1);
+}
+.model1_introduce .contents img:hover,.model2_novel .contents img:hover,.model3_movie .contents img:hover,.model4_technology .contents img:hover{
+  margin-top:20px;
+  float: left;
+  transform: scale(1.1);/*中间放大1.1倍*/
+  opacity: 0.6;
+  cursor: pointer;
 }
 .model1_introduce .contents p,.model2_novel .contents p,.model3_movie .contents p,.model4_technology .contents p{
   color: #888;
