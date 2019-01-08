@@ -194,8 +194,8 @@ ul{
   height: 50px;
   background: rgba(235, 108, 52,0.7);
   position: fixed;
-  top:650px;
-  left:1450px;
+  top:90%;
+  left:95%;
   border-radius: 10px;
 }
 .to_top a{
