@@ -1,0 +1,110 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+body{
+background-image: url(../images/05.jpg);
+background-position:;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+.login{
+  width: 550px;
+  height:550px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin:90px auto 0;
+  box-shadow: 10px 10px 40px #444;
+  background:rgba(255, 255, 255,0.8);
+  overflow: hidden;
+  position: relative;
+}
+.login .content{
+  width: 550px;
+  height: 550px;
+  padding-top: 30px;
+}
+.login .content img{
+  width: 320px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+.login .content ul{
+  display: block;
+  height: 200px;
+  width: 320px;
+  margin: 0 auto;
+  padding-top:30px;
+}
+.login .content ul li{
+  height:50px;
+  width: 220px;
+  margin: 0 auto;
+}
+.login .content ul li input{
+  display: block;
+  padding-left: 5px;
+  width: 220px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px auto 0;
+  font:15px "微软雅黑";
+  color: #fb9700;
+  outline:none;
+  border: 1px solid #fb9700;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+input::placeholder {
+  /* placeholder颜色  */
+  color: #fb9700;
+  /* placeholder字体大小  */
+  font-size: 15spx;
+  /* placeholder位置  */
+  text-align: left;
+}
+.login .on{
+  background-color: #fb9700;
+  width: 500px;
+  height: 150px;
+  margin: -20px auto 0;
+  position: relative;
+  overflow:hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.login .on:hover{
+  animation: move 3s;
+  animation-fill-mode: forwards;/*保持原来位置*/
+}
+.login .on a{
+  width: 500px;
+  height: 150px;
+  color: #fff;
+  font: 30px "微软雅黑";
+  position: absolute;
+  left:20px;
+  top:30px;
+  display: block;
+}
+@keyframes move{
+  to{
+    transform: rotate(1turn);
+    width: 500px;
+    height: 150px;
+    border-radius: 0;
+    text-align: center;
+    line-height: 120px
+    position: absolute;
+    left:-15px;
+  }
+}
