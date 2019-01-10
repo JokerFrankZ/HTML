@@ -18,18 +18,23 @@ position: relative;
 .login{
   width: 550px;
   height:550px;
-  background-color: #fff;
   border-radius: 50%;
   margin:90px auto 0;
-  box-shadow: 10px 10px 40px #444;
-  background:rgba(255, 255, 255,0.8);
+  transition:all 0.5s;
+  transition-timing-function: cubic-bezier(0.25,0.5,0.75,1);
+  background:rgba(255, 255, 255,0.5);
   overflow: hidden;
   position: relative;
+}
+.login:hover{
+  background:#FFF;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255,0.5);
 }
 .login .content{
   width: 550px;
   height: 550px;
   padding-top: 30px;
+  position: relative;
 }
 .login .content img{
   width: 320px;
@@ -73,8 +78,6 @@ input::placeholder {
 }
 .login .on{
   background-color: #fb9700;
-  width: 500px;
-  height: 150px;
   margin: -20px auto 0;
   position: relative;
   overflow:hidden;
@@ -83,28 +86,27 @@ input::placeholder {
   border-radius: 50%;
 }
 .login .on:hover{
-  animation: move 3s;
+  animation: move 1s;
   animation-fill-mode: forwards;/*保持原来位置*/
 }
 .login .on a{
   width: 500px;
-  height: 150px;
   color: #fff;
   font: 30px "微软雅黑";
   position: absolute;
-  left:20px;
+  left:-202px;
   top:30px;
   display: block;
+  text-align: center;
+}
+.login .on:hover a{
+  left:0;
 }
 @keyframes move{
   to{
-    transform: rotate(1turn);
     width: 500px;
     height: 150px;
     border-radius: 0;
-    text-align: center;
     line-height: 120px
-    position: absolute;
-    left:-15px;
   }
 }
