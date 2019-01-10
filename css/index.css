@@ -13,6 +13,7 @@ ul{
   font-family: "迷你简卡通";
   src: url(../fonts/迷你简卡通.TTF);
 }
+/*-----------通用样式--------------------------------*/
 .all{
   width: 100%;
   height: 100%;
@@ -145,6 +146,7 @@ ul{
     font-size: 50px;
   }
 }
+/*-------------头部样式表---------------------*/
 .all .mid{
   width: 1200px;
   height: 100%;
@@ -187,12 +189,13 @@ box-shadow: 5px 5px 30px #bbb;
   position: absolute;
   left: 50px;
   top:15px;
+  width: 200px;
 }
 .model1_introduce .contents,.model2_novel .contents,.model3_movie .contents,.model4_technology .contents{
   background-color: #fff;
   height: 340px;
 }
-.model1_introduce .contents img,.model2_novel .contents img,.model3_movie .contents img,.model4_technology .contents img{
+.model1_introduce .contents .imgL,.model2_novel .contents .imgL,.model3_movie .contents .imgL,.model4_technology .contents .imgL{
   margin-top:20px;
   float: left;
   width: 400px;
@@ -200,7 +203,7 @@ box-shadow: 5px 5px 30px #bbb;
   border-radius:5px;
   transition: all 0.8s cubic-bezier(0.25,0.5,0.75,1);
 }
-.model1_introduce .contents img:hover,.model2_novel .contents img:hover,.model3_movie .contents img:hover,.model4_technology .contents img:hover{
+.model1_introduce .contents .imgL:hover,.model2_novel .contents .imgL:hover,.model3_movie .contents .imgL:hover,.model4_technology .contents .imgL:hover{
   margin-top:20px;
   float: left;
   transform: scale(1.05);/*中间放大1.1倍*/
@@ -210,10 +213,69 @@ box-shadow: 5px 5px 30px #bbb;
 }
 .model1_introduce .contents p,.model2_novel .contents p,.model3_movie .contents p,.model4_technology .contents p{
   color: #888;
-  font: 50px "微软雅黑";
-  text-align: center;
-  line-height:110px;
+  width:700px;
+  font: 20px "微软雅黑";
+  text-align: left;
+  float:left;
+  margin-left: 40px;
+  line-height:50px;
+  text-indent: 2em;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.25,0.5,0.75,1);
 }
+.model1_introduce .contents p:hover,.model2_novel .contents p:hover,.model3_movie .contents p:hover,.model4_technology .contents p:hover{
+  color:rgb(231, 195, 170);
+}
+.model2_novel .contents p,.model3_movie .contents p{
+  text-indent: 0em;
+  height: 300px;
+  width: 300px;
+  line-height:40px;
+}
+.model2_novel .contents .word,.model3_movie .contents .word{
+  text-indent: 2em;
+  height: 300px;
+  width: 400px;
+  line-height:40px;
+  margin-left: 0px;
+}
+.model4_technology .contents .word{
+  margin-left: 50px;
+}
+.model1_introduce .contents h1,.model4_technology .contents h1{
+  color: #888;
+  width:700px;
+  font: 20px "微软雅黑";
+  font-weight: bold;
+  text-align: center;
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.model4_technology .contents h1{
+  margin-bottom: 20px;
+}
+.model1_introduce .contents ul{
+  width: 660px;
+  height:50px;
+  float: left;
+  margin: 30px 0 0 60px;
+  cursor: pointer;
+}
+.model1_introduce .contents ul li{
+  height:50px;
+  width: 100px;
+  margin-left:10px;
+  float: left;
+}
+.model1_introduce .contents ul li img{
+  transition: all 0.5s cubic-bezier(0.25,0.5,0.75,1);
+}
+.model1_introduce .contents ul li img:hover{
+  filter: sepia(100%);
+}
+/*--------------------中间部分样式表------------------*/
 .to_top{
   width:50px;
   height: 50px;
@@ -222,7 +284,7 @@ box-shadow: 5px 5px 30px #bbb;
   top:90%;
   left:95%;
   border-radius: 10px;
-  z-index: 9999999;
+  z-index: 9999999;/*注意需要有定位才能使用z-index*/
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.25,0.5,0.75,1);
 }
@@ -240,6 +302,7 @@ box-shadow: 5px 5px 30px #bbb;
   font-weight: bold;
   font-size: 20px;
 }
+/*----------------到顶部----------------*/
 .all .feet{
   height: 300px;
   background-repeat:repeat-x;
@@ -249,6 +312,9 @@ box-shadow: 5px 5px 30px #bbb;
   margin-top: 10px;
   position:relative;
   z-index: 999;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
 }
 .all .feet .contact{
   height: 250px;
@@ -288,28 +354,99 @@ box-shadow: 5px 5px 30px #bbb;
 .all .feet .copyright{
   text-align: center;
   height: 50px;
-  line-height: 50px;
   background-color: #222;
   color: #ccc;
   position: relative;
 }
-.all .feet .copyright a{
+.all .feet .copyright span{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ccc;
+  display: inline-block;
+}
+.all .feet .copyright span a{
   color: #ccc;
   transition: color 0.8s cubic-bezier(0.25,0.5,0.75,1);
 }
-.all .feet .copyright a:hover{
+.all .feet .copyright span a:hover{
   color: rgba(67, 245, 236, 0.75);
 }
-.all .feet .copyright img{
-  position: absolute;
-  left:1070px;
-  top:7px;
+.all .feet .copyright span img{
+  margin: 7px 0 0 20px;
   filter: grayscale(100%);
   transition: all 1s cubic-bezier(0.25,0.5,0.75,1);
+  float: right;
 }
-.all .feet .copyright img:hover{
+.all .feet .copyright span img:hover{
   filter: grayscale(0%);
 }
+/*-------------------flex盒子-------------------------------------*/
+@media all and (max-width: 1500px) {
+  .all .feet .contact .con{
+      width:300px;
+      height: 210px;
+      float: left;
+      margin:20px 0 0 80px;
+    }
+    .all .feet .contact .cont{
+      border-left:none;
+    }
+    .all .feet .contact .con img{
+      width: 150px;
+      height: 150px;
+      margin-left: 60px;
+      margin-top: 30px;
+    }
+    .all .feet .contact .con p{
+      margin: 40px 0 0 110px;
+      font-size: 20px;
+      width: 200px;
+    }
+}
+@media all and (max-width: 1160px) {
+  .all .feet .contact .con{
+      width:200px;
+      margin:20px 0 0 60px;
+    }
+    .all .feet .contact .cont{
+      border-left:none;
+    }
+    .all .feet .contact .con img{
+      margin-top: -10px;
+      margin-left: 80px;
+    }
+}
+@media all and (max-width: 800px) {
+  .all .feet .contact .con{
+      margin:20px 0 0 30px;
+    }
+    .all .feet .contact .cont{
+      border-left:none;
+    }
+    .all .feet .contact .con img{
+      margin-top: 10px;
+      margin-left: 80px;
+      width: 100px;
+      height: 100px;
+    }
+    .all .feet .contact .con p{
+      margin: 40px 0 0 80px;
+      font-size: 15px;
+      width: 50px;
+    }
+  }
+@media all and (max-width: 600px) {
+  .all .feet{
+    display: none;
+  }
+  .all:after{
+    content: "请不要再继续挤了！";
+    color: red;
+    font-size: 50px;
+  }
+}
+/*-----------------底部及其版权-------------------------*/
 @keyframes move{
   0% {
     color:#ffffff;
@@ -325,3 +462,4 @@ box-shadow: 5px 5px 30px #bbb;
     font-size: 50px;
   }
 }
+/*-----------------CSS3动画效果在头部Logo处有应用--------------------*/
