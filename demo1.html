@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>demo1</title>
+</head>
+<style>
+*{padding:0px;margin:0px;}
+body{
+	background-color:#333;
+}
+.box{
+	height:100px;
+	width:100px;
+	background-color:#FFF;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+   	margin:-50px 0 0 -50px;
+	transition: all 0.3s ease;
+	border-radius:30px;
+}
+.box:before{
+	content:"";
+	position:absolute;
+	top:-2px;
+	left:-2px;
+	right:-2px;
+	bottom:-2px;
+	background:#00ff00;
+	border-radius:30px;
+	z-index: -1;
+	transition: all 0.3s ease;
+}
+.box:after{
+	content:"";
+	position:absolute;
+	top:-2px;
+	left:-2px;
+	right:-2px;
+	bottom:-2px;
+	background:#00ff00;
+	border-radius:30px;
+	z-index: -2;
+	filter: blur(40px);
+	transition: all 0.3s ease;
+}
+.box:before,.box:after{
+	background: linear-gradient(235deg,#89ff00,#000,#00bcd4);
+}
+.box:hover{ 
+	background-color:#C9F;
+	border-radius:50%;
+}
+.box:hover.box:before{
+	border-radius:50%;
+	animation:mymove 1s infinite;
+}
+.box:hover.box:after{
+	border-radius:50%;
+	animation:mymove 1s infinite;
+}
+@keyframes mymove{
+	from{background: linear-gradient(235deg,#89ff00,#000,#00bcd4);}
+
+	to{background: linear-gradient(235deg,#00bcd4,#000,#89ff00);}
+}
+</style>
+<body>
+	<div class="box"></div>
+</body>
+</html>
