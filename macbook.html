@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/logoico.png" />
+    <title>MacBook Pro</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: #fff;
+      }
+      div {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      a {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /*苹果的字体*/
+        font-weight: lighter;
+        /* color: red; */
+        color: transparent;
+        /* 字体颜色为透明 */
+        background-image: linear-gradient(
+          92deg,
+          #f35626 0%,
+          #feab3a 50%,
+          #b4e62d 100%
+        );
+        /* 背景颜色渐变 */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* 背景颜色只在有字的地方显示 */
+        /* -webkit-text-fill-color: transparent; */
+        /* 把字体的填充颜色变成透明 */
+        font-size: 100px;
+        animation: hue 5s linear infinite;
+        /* 使用动画 名字，持续时间，运动方式：linear是匀速，使用次数：infinite是无限*/
+      }
+      #logo {
+        width: 80px;
+        height: 80px;
+        background: url("./images/logo.svg") no-repeat;
+        background-size: 80px auto;
+        animation: hue 5s linear infinite;
+      }
+      #mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      #mask div {
+        width: 80px;
+        height: 80px;
+        background: url("./images/logo.svg") no-repeat;
+        background-size: 80px auto;
+        animation: hueblur 5s linear infinite;
+      }
+      #mask a {
+        animation: hueblur 5s linear infinite;
+      }
+      @keyframes hue {
+        0% {
+          filter: hue-rotate(0deg);
+          /* 滤镜--色轮旋转*/
+        }
+        100% {
+          filter: hue-rotate(-360deg);
+        }
+      }
+      @keyframes hueblur {
+        0% {
+          filter: hue-rotate(0deg) blur(20px);
+          /* 滤镜--色轮旋转+高斯模糊*/
+        }
+        100% {
+          filter: hue-rotate(-360deg) blur(20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="logo"></div>
+      <a href="#">MacBook Pro</a>
+    </div>
+
+    <!-- 用于设置下面的模糊 -->
+    <div id="mask">
+      <div></div>
+      <a href="#">MacBook Pro</a>
+    </div>
+  </body>
+</html>
